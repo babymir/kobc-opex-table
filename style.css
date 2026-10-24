@@ -1,0 +1,80 @@
+:root {
+  --글: #1a1a1a;
+  --옅은글: #555;
+  --선: #c8c8c8;
+  --바탕: #ffffff;
+  --회색: #f3f3f3;
+  --강조: #1f3a5f;
+  --경고: #a4262c;
+  --경고바탕: #fbeeee;
+  --확인: #2e6b3a;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  color: var(--글);
+  background: var(--바탕);
+  line-height: 1.6;
+  font-size: 15px;
+}
+.틀 { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+h1 { font-size: 26px; margin: 4px 0 6px; }
+h2 { font-size: 17px; margin: 18px 0 8px; }
+h3 { font-size: 15px; margin: 14px 0 6px; }
+ul, ol { padding-left: 20px; margin: 6px 0; }
+li { margin: 3px 0; }
+.작게 { font-size: 13px; color: var(--옅은글); }
+.알림 { margin-top: 12px; }
+
+.머리 { border-bottom: 2px solid var(--글); padding: 20px 0 14px; }
+.한줄 { margin: 0; font-size: 16px; }
+
+.상자 { border: 1px solid var(--선); padding: 4px 18px 16px; margin: 18px 0; }
+.두칸 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.순서 li b { display: inline-block; min-width: 86px; }
+
+button { font: inherit; cursor: pointer; }
+.버튼줄 { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.주버튼 { background: var(--강조); color: #fff; border: 1px solid var(--강조); padding: 8px 14px; }
+.보조버튼 { background: #fff; color: var(--강조); border: 1px solid var(--강조); padding: 8px 14px; }
+.작은버튼 { white-space: nowrap; background: #fff; border: 1px solid var(--선); padding: 3px 9px; font-size: 13px; }
+
+.단계 { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--글); margin-top: 26px; }
+.단계 button { background: none; border: none; border-bottom: 3px solid transparent; padding: 8px 12px; color: var(--옅은글); }
+.단계 button.지금 { color: var(--글); border-bottom-color: var(--글); font-weight: 700; }
+.단계화면 { display: none; padding: 6px 0 24px; }
+.단계화면.지금 { display: block; }
+
+.표틀 { overflow-x: auto; margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { border: 1px solid var(--선); padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: var(--회색); font-weight: 600; white-space: nowrap; }
+td.수 { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.넘음 td { background: var(--경고바탕); }
+tr.합계 td { font-weight: 700; background: var(--회색); }
+.경고글 { color: var(--경고); font-weight: 600; }
+.확인글 { color: var(--확인); font-weight: 600; }
+select { font: inherit; font-size: 14px; padding: 2px 4px; max-width: 100%; }
+
+.카드들 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.카드 { border: 1px solid var(--선); padding: 10px 12px; }
+.카드 h3 { margin-top: 2px; }
+.원본 { margin-top: 8px; font-size: 13px; }
+.원본.PDF { font-family: "Times New Roman", serif; }
+
+.요약줄 { background: var(--회색); padding: 10px 12px; margin: 10px 0; }
+.질의 { width: 100%; min-height: 150px; font: inherit; font-size: 14px; padding: 8px; border: 1px solid var(--선); }
+.오른쪽 { display: flex; justify-content: flex-end; margin-top: 14px; }
+
+footer { border-top: 1px solid var(--선); margin-top: 30px; padding-bottom: 30px; }
+
+@media (max-width: 720px) {
+  h1 { font-size: 22px; }
+  .두칸, .카드들 { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .상자 { padding: 4px 12px 14px; }
+  .단계 button { padding: 8px 8px; font-size: 14px; }
+  table { font-size: 13px; }
+}
+#단계4 td:nth-child(-n+2), #단계2 td:first-child span { white-space: nowrap; }

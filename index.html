@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>운영비 한 표</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="머리">
+  <div class="틀">
+    <p class="작게">2026 해운·항만·물류 AX 혁신 아이디어 공모전 시제품</p>
+    <h1>운영비 한 표</h1>
+    <p class="한줄">선박관리사마다 양식이 다른 월간 선박 운영비 보고서를 AI가 읽어 <b>선박별 표준 항목표</b>로 정리하고, 예산을 넘은 항목을 먼저 알려 줍니다.</p>
+  </div>
+</header>
+
+<main class="틀">
+  <section id="첫화면" class="상자">
+    <div class="두칸">
+      <div>
+        <h2>누가 쓰나</h2>
+        <ul>
+          <li><b>중소선사 재무·선박관리 담당자</b> — 관리사 보고서를 매달 받아 회사 양식으로 옮기는 사람</li>
+          <li><b>해양진흥공사 금융·자산관리 담당자</b> — 공사가 지원한 선박의 운영비 흐름을 보는 사람 (선사 동의 시)</li>
+        </ul>
+        <h2>왜 필요한가</h2>
+        <ul>
+          <li>국제 표준 선박관리계약(BIMCO SHIPMAN 2024 제14조)은 예산 대비 실적 보고를 "양측이 합의한 형식"으로 내게만 정함 → 관리사마다 양식이 다름</li>
+          <li>국내 전문 위탁관리 선박 1,969척, 선박관리업체 369곳 (2022년)</li>
+          <li>벌크선 한 척 하루 운영비 약 5,180달러, 1년이면 약 189만 달러</li>
+        </ul>
+      </div>
+      <div>
+        <h2>이렇게 씁니다</h2>
+        <ol class="순서">
+          <li><b>보고서 받기</b> 관리사가 보낸 엑셀·PDF를 그대로 넣음</li>
+          <li><b>항목 맞추기</b> AI가 표준 7개 항목에 맞춰 제안 → 사람이 확인. 확인한 것은 다음 달부터 자동</li>
+          <li><b>선박별 표</b> 예산 대비 실적, 넘은 항목, 관리사에 보낼 질의 초안</li>
+        </ol>
+        <div class="버튼줄">
+          <button class="주버튼" data-이동="1">선사 담당자로 보기</button>
+          <button class="보조버튼" data-이동="4">해양진흥공사 담당자로 보기</button>
+        </div>
+        <p class="작게 알림">이 화면의 선사·선박·관리사·금액은 모두 가상 예시입니다. AI 분류 결과는 미리 만들어 둔 예시입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="단계" aria-label="단계">
+    <button data-단계="1">1 보고서 받기</button>
+    <button data-단계="2">2 항목 맞추기</button>
+    <button data-단계="3">3 선박별 표</button>
+    <button data-단계="4">4 공사 요약</button>
+  </nav>
+
+  <section id="단계1" class="단계화면"></section>
+  <section id="단계2" class="단계화면"></section>
+  <section id="단계3" class="단계화면"></section>
+  <section id="단계4" class="단계화면"></section>
+
+  <footer class="작게">
+    <h2>근거 자료</h2>
+    <ul>
+      <li>BIMCO SHIPMAN 2024 표준 선박관리계약 제14조(d), 제21조(a)</li>
+      <li>한국항해항만학회지 48(2), 2024 — 한국선박관리산업협회 2022년 자료 인용</li>
+      <li>Drewry, Ship Operating Costs Annual Review and Forecast 2025/26 — 운영비 7개 항목 분류</li>
+      <li>Star Bulk 2025년 4분기 실적 자료(벌크선 하루 운영비), TORM 2025년 실적 자료(석유제품운반선)</li>
+      <li>한국해양진흥공사 AX Summit 2026 발표자료 — 선박 자산 진단(선박 ID 중심 데이터 연결)</li>
+    </ul>
+  </footer>
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
